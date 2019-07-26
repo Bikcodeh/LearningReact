@@ -21,10 +21,13 @@ export default class Title extends React.Component{
      * Ese si se puede ya que es un solo elemento padre y puede tener muchos hijos.
      */
 
+     /**props, propiedades de un componente que enviamos cuando el componente se genera */
+
+     /** si usaremos un valor que no cambiara en su ejecucion, entonces usamos los props */
      render(){
          return(
              <div>
-                <h1>Places</h1>
+                <h1>{ this.props.title }</h1>
                 <p>Descubre lugares de manera simple</p>
              </div>
          );
