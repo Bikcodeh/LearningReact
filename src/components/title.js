@@ -1,3 +1,4 @@
+/** import nos permite traer modulos externos a nuestro archivo para poder usarlos */
 import React from 'react'
 
 /** Cuando le damos export default es porque estamos exportando la clase como tal  */
@@ -5,6 +6,8 @@ import React from 'react'
 /** Para que una clase se convierta en una clase que genere un componente  de react,
  * debe de heredar de React.Component
  */
+
+ /** Solo se exporta un elemento por default  */
 export default class Title extends React.Component{
     /** La segunda caracteristica es que el component debe implementar el render y que ese elemento
      * render retorne al menos un elemento html y no mas de un elemento html */
@@ -26,4 +29,8 @@ export default class Title extends React.Component{
              </div>
          );
      }
+}
+
+export function saludar(){
+    return "SALUDO DESDE COMPONENTE NO DEFAULT"
 }
