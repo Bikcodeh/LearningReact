@@ -5,12 +5,33 @@ import './App.css';
 import Title from './components/title';
 
 /** cuando importamos un elemento que no es por default, tenemos que importalo con el nombre de el */
-function App() {
-  return (
-    <section>
+
+/** Para manejar el state debemos agregar un valor por defecto en el constructor */
+class App extends React.Component{
+
+  constructor(props){
+    super(props);
+
+    /**  el this.state guarda datos de todo aquello que se pueden actualizar mientras se esta ejecutando el componente */
+    this.state = {
+      numero: 0
+    }
+
+    setInterval(() => {
+      /** La unica forma de actualizar un valor del state, es UNICAMENTE con setState */
+      this.setState({
+        numero: this.state.numero + 1
+      })
+    }, 1000)
+  }
+
+  render (){
+    return (
+      <section>
       <div>
         <div> 
           <Title></Title>
+          <h2> {this.state.numero} </h2>
           <button>Crear una cuenta gratuita</button>
           <img src={ process.env.PUBLIC_URL + 'images/icono01.png'} alt="icono bici"/>
           <div>
@@ -32,7 +53,8 @@ function App() {
         </div>
       </div>
     </section>
-  );
+    ) 
+  }
 }
 
 export default App;
