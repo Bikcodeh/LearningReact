@@ -1,30 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 /** Como estamos importando el elemento por default, podemos darle un nombre al tag que usaremos para invocarlo */
 import Title from './components/title';
 
 /** cuando importamos un elemento que no es por default, tenemos que importalo con el nombre de el */
-import { saludar } from './components/title';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Title title = "Que onda mi pez"></Title>
-        { saludar() }
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+      <div>
+        <div> 
+          <Title></Title>
+          <button>Crear una cuenta gratuita</button>
+          <img src={ process.env.PUBLIC_URL + 'images/icono01.png'} alt="icono bici"/>
+          <div>
+            <ul>
+              <li>
+                <h3>Calificaciones con emociones</h3>
+                <p>Califica tus lugares con experiencias, no con numeros</p>
+              </li>
+              <li>
+                <h3>Sin internet? Sin problemas</h3>
+                <p>Places funciona sin internet o en conexiones lentas</p>
+              </li>
+              <li>
+                <h3>Tus lugares favoritos</h3>
+                <p>Define tus lista de lugares favoritos</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
