@@ -16,13 +16,12 @@ class App extends React.Component{
     this.state = {
       numero: 0
     }
+  }
 
-    setInterval(() => {
-      /** La unica forma de actualizar un valor del state, es UNICAMENTE con setState */
-      this.setState({
-        numero: this.state.numero + 1
-      })
-    }, 1000)
+  updateNumero(){
+    this.setState({
+      numero: this.state.numero + 1
+    });
   }
 
   render (){
@@ -32,7 +31,9 @@ class App extends React.Component{
         <div> 
           <Title></Title>
           <h2> {this.state.numero} </h2>
-          <button>Crear una cuenta gratuita</button>
+          { /** onClick es reservado de react */}
+          {/** Debemos procurar siempre usar arrow funtions para no corromper el ambito de react de los elementos */}
+          <button onClick={()=>{ this.updateNumero() }}>Crear una cuenta gratuita</button>
           <img src={ process.env.PUBLIC_URL + 'images/icono01.png'} alt="icono bici"/>
           <div>
             <ul>
