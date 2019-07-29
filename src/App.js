@@ -16,6 +16,9 @@ class App extends React.Component{
     this.state = {
       numero: 0
     }
+    /**Y esto va en el constructor */
+    /**En vez de colocar la funcion directamente en el JSX, que colocando la funciona anonima etc, hay una forma mas elegante de pasar la funcion */
+    this.updateNumero = this.updateNumero.bind(this);
   }
 
   updateNumero(){
@@ -33,7 +36,7 @@ class App extends React.Component{
           <h2> {this.state.numero} </h2>
           { /** onClick es reservado de react */}
           {/** Debemos procurar siempre usar arrow funtions para no corromper el ambito de react de los elementos */}
-          <button onClick={()=>{ this.updateNumero() }}>Crear una cuenta gratuita</button>
+          <button onClick={ this.updateNumero }>Crear una cuenta gratuita</button>
           <img src={ process.env.PUBLIC_URL + 'images/icono01.png'} alt="icono bici"/>
           <div>
             <ul>
