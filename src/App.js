@@ -1,4 +1,5 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
 import "./App.css";
 
 /** Como estamos importando el elemento por default, podemos darle un nombre al tag que usaremos para invocarlo */
@@ -8,10 +9,6 @@ import Title from "./components/title";
 
 /** Para manejar el state debemos agregar un valor por defecto en el constructor */
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
 
   render() {
     return (
@@ -26,9 +23,9 @@ class App extends React.Component {
               <Title />
               {/** onClick es reservado de react */}
               {/** Debemos procurar siempre usar arrow funtions para no corromper el ambito de react de los elementos */}
-              <button>
+              <Button variant="contained" color="secondary">
                 Crear una cuenta gratuita
-              </button>
+              </Button>
               <img
                 src={process.env.PUBLIC_URL + "images/icono01.png"}
                 alt="icono bici"
