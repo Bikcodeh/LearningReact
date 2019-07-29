@@ -1,7 +1,9 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import purple from "@material-ui/core/colors/purple";
+import indigo from "@material-ui/core/colors/indigo";
 import red from "@material-ui/core/colors/red";
+import amber from "@material-ui/core/colors/amber";
+import lightBlue from "@material-ui/core/colors/lightBlue";
 import { Card } from "@material-ui/core";
 import { CardContent } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
@@ -38,54 +40,80 @@ class App extends React.Component {
                 className="Header-illustration"
               />
             </div>
+            <div className="container">
+              <Box mb={3}>
+                <Card className="Header-benefit">
+                  <CardContent className="contentCard">
+                    <div className="row">
+                      <div
+                        className="Header-benefit-image"
+                        style={{ background: red[400] }}
+                      >
+                        <img
+                          src={process.env.PUBLIC_URL + "images/icono01.png"}
+                          alt="imagen"
+                          width="100px"
+                          height="100px"
+                        />
+                      </div>
+                      <div className="Header-benefit-content">
+                        <h3>Tus lugares favoritos</h3>
+                        <p>Define tus lista de lugares favoritos</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Box>
+              <Box mb={3}>
+                <Card className="Header-benefit">
+                  <CardContent className="contentCard">
+                    <div className="row">
+                      <div
+                        className="Header-benefit-image"
+                        style={{ background: lightBlue[400] }}
+                      >
+                        <img
+                          src={process.env.PUBLIC_URL + "images/icono01.png"}
+                          alt="imagen"
+                          width="100px"
+                          height="100px"
+                        />
+                      </div>
+                      <div className="Header-benefit-content">
+                        <h3>Tus lugares favoritos</h3>
+                        <p>Define tus lista de lugares favoritos</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Box>
+              <Box mb={3}>
+                <Card className="Header-benefit">
+                  <CardContent className="contentCard">
+                    <div className="row">
+                      <div
+                        className="Header-benefit-image"
+                        style={{ background: amber[400] }}
+                      >
+                        <img
+                          src={process.env.PUBLIC_URL + "images/icono01.png"}
+                          alt="imagen"
+                          width="100px"
+                          height="100px"
+                        />
+                      </div>
+                      <div className="Header-benefit-content">
+                        <h3>Tus lugares favoritos</h3>
+                        <p>Define tus lista de lugares favoritos</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Box>
+            </div>
           </div>
         </div>
-        <div style={{ background: purple[500], padding: "50px" }}>
-          <ul>
-            <Box mb={3}>
-              <Card className="Header-benefit">
-                <CardContent style={{ background: red[400] }}>
-                  <img
-                    src={process.env.PUBLIC_URL + "images/icono02.png"}
-                    alt="imagen"
-                    width="100px"
-                    height="100px"
-                  />
-                  <h3>Calificaciones con emociones</h3>
-                  <p>Califica tus lugares con experiencias, no con numeros</p>
-                </CardContent>
-              </Card>
-            </Box>
-            <Box mb={2}>
-              <Card className="Header-benefit">
-                <CardContent style={{ background: red[400] }}>
-                  <img
-                    src={process.env.PUBLIC_URL + "images/icono03.png"}
-                    alt="imagen"
-                    width="100px"
-                    height="100px"
-                  />
-                  <h3>Sin internet? Sin problemas</h3>
-                  <p>Places funciona sin internet o en conexiones lentas</p>
-                </CardContent>
-              </Card>
-            </Box>
-            <Box mb={2}>
-              <Card className="Header-benefit">
-                <CardContent style={{ background: red[400] }}>
-                  <img
-                    src={process.env.PUBLIC_URL + "images/icono01.png"}
-                    alt="imagen"
-                    width="100px"
-                    height="100px"
-                  />
-                  <h3>Tus lugares favoritos</h3>
-                  <p>Define tus lista de lugares favoritos</p>
-                </CardContent>
-              </Card>
-            </Box>
-          </ul>
-        </div>
+        <div style={{ background: indigo[500], padding: "50px" }} />
       </section>
     );
   }
