@@ -11,7 +11,7 @@ export default function PlacesCards() {
           <CardMedia>
             <img src={process.env.PUBLIC_URL + place.imageUrl} alt="" />
           </CardMedia>
-          <CardHeader>{place.title}</CardHeader>
+          <CardHeader title={place.title}></CardHeader>
           <CardContent>{place.description}</CardContent>
         </Card>
       </Box>

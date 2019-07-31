@@ -10,9 +10,9 @@ export default function Section(props){
     return(
         <section>
         <Header lang={ props.lang } change={ props.change } />
-        <div style={ styleContainerCardsMain.containerCards }>
+        <div className="row" style={ styleContainerCardsMain.containerCards }>
+          <h3 style={ styleContainerCardsMain.containerCardsH3 }>Sitios populares</h3>
           <div
-            className="row"
             style={ styleContainerButtom.containerBottom }
           >
            <PlacesCard />
